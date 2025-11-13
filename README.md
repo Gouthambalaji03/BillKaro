@@ -1,16 +1,77 @@
-# React + Vite
+# Invoice Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Invoice Builder is a responsive React application for creating, managing, and exporting professional invoices. It lets you maintain client details, add multiple line items, calculate totals in real time, and export the final invoice as a PDF.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Client information management (name, address, city/state, email, tax rate)
+- Dynamic line items with add, edit, delete options
+- Auto-calculated subtotal, tax, and grand total
+- PDF export with styled invoice layout and rupee currency formatting
+- TailwindCSS styling and responsive layout
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19 with Vite
+- TailwindCSS (built via PostCSS in `index.css`)
+- jsPDF for PDF generation
+- ESLint for linting
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js >= 18
+- npm >= 9
+
+### Installation
+
+```bash
+npm install
+npm run dev
+```
+
+Visit [http://localhost:5173](http://localhost:5173) to use the app.
+
+### Building for Production
+
+```bash
+npm run build
+npm run preview
+```
+
+## Project Structure
+
+```
+src/
+  components/
+    ClientInfo.jsx          // Client form section
+    ExportButton.jsx        // PDF export button
+    InvoiceHeader.jsx       // Invoice metadata inputs
+    InvoiceTotals.jsx       // Totals summary card
+    LineItemsTable.jsx      // Line items table
+    LineItemRow.jsx         // Individual line item row
+  utils/
+    pdfExport.js            // jsPDF export logic
+  App.jsx                   // Root application layout
+  main.jsx                  // React entry point
+  index.css                 // Tailwind directives and global styles
+```
+
+## PDF Export Notes
+
+- Amounts are formatted using the Indian numbering system with the `Rs.` prefix.
+- Table layout is generated manually with jsPDF primitives to ensure proper alignment.
+- If you extend the invoice to span multiple pages, update `pdfExport.js` to re-render the table header on each new page.
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/my-feature`)
+3. Commit your changes (`git commit -m 'Add feature'`)
+4. Push to branch (`git push origin feature/my-feature`)
+5. Open a pull request
+
+## License
+
+This project is MIT licensed. See the [LICENSE](LICENSE) file for details.
