@@ -18,7 +18,7 @@ function ClientInfo({ invoiceData, handleInvoiceChange }) {
             value={invoiceData.clientName}
             onChange={handleInvoiceChange}
             className="w-full px-3 sm:px-4 py-2 sm:py-2.5 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-gray-50 focus:bg-white placeholder:text-gray-400 text-sm sm:text-base"
-            placeholder="Goutham(Client Name)"
+            placeholder="FullName (Client Name)"
           />
         </div>
         <div className="group">
