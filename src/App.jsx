@@ -104,9 +104,9 @@ function App() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-6 sm:mb-8">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-2">
-            Invoice Builder
+            BillKaro
           </h1>
-          <p className="text-sm sm:text-base text-gray-600">Create professional invoices in minutes</p>
+          <p className="text-sm sm:text-base text-gray-600">Professional invoices banao, minutes mein!</p>
         </div>
 
         <div className="bg-white rounded-xl shadow-xl border border-gray-100 p-4 sm:p-6 md:p-8 lg:p-10 transition-all duration-300 hover:shadow-2xl">

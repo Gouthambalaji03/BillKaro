@@ -1,6 +1,6 @@
-# Invoice Builder
+# BillKaro
 
-Invoice Builder is a responsive React application for creating, managing, and exporting professional invoices. It lets you maintain client details, add multiple line items, calculate totals in real time, and export the final invoice as a PDF.
+BillKaro is a responsive React application for creating, managing, and exporting professional invoices. It lets you maintain client details, add multiple line items, calculate totals in real time, and export the final invoice as a PDF.
 
 ## Features
 
